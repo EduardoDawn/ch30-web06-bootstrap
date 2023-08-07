@@ -132,8 +132,29 @@ console.log(`Valor de la sumatoria ${10 + (+myAgeTxt)}`); //33
 */
 console.log(Number("123 - 456"));
 console.log(parseInt("123 - 456"));
-console.log(parseInt("$123 - 456"));
+console.log(parseInt("$123 - 456".slice(1)));
 console.log(Number(true));
 console.log(parseInt(true));
+
+//Conversión  a booleano
+/* En la conversión de boolean los siguientes valores son false:
+    "", false, 0, null, undefined 
+*/
+console.log("Boolean(1): " + Boolean(1)); //true
+console.log("Boolean(100): " + Boolean(100)); //true
+console.log("Boolean('Hola'): " + Boolean("Hola")); //true
+console.log("Boolean('false'): " + Boolean("false")); //true
+const isBelicoso = "false";
+
+//Number
+// [] -> 0, [30] -> 30, [30,33] -> NaN, flase -> 0, true -> 1
+//String
+// [] -> "", [12,2] -> "12, 2", function(){} -> "function(){}", {} -> [object, object]
+
+
+
+
+
+
 
 
