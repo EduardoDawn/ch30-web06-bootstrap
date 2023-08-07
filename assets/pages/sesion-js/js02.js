@@ -59,3 +59,19 @@ else{
 
 console.log(saludo("Lalo"));
 console.log(saludo("David"));
+
+
+/*
+-----------------------Fuciones autoinvocadas ------------------
+                (selft-invoking functions)
+Funciones que se autoinvocan, se pueden definir con funciones anónimas.
+
+sitaxis:
+    (function ( ){} )();
+
+*/ 
+
+(function(name){
+    console.log(`Me llamo ${name} y me autoinvoco`);
+})("ChatGPT");
+
