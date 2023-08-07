@@ -50,3 +50,32 @@ console.log(`Tipo de dato verdadero: ${false}` );
 //Una variable que es declarada pero el tipo de dato no es definido
 let myVar;
 console.log(`Tipo de dato no definido: ${myVar}`);
+
+//tipo de dato null
+//Una variable que intensionalmente se borra el tipo de dato
+let myVarNull;
+console.log(`Tipo de dato myVarNull: ${typeof myVarNull}`); // undefined
+myVarNull = "no";
+console.log(`Tipo de dato myVarNull: ${typeof myVarNull}`); // string
+myVarNull = null;
+console.log(`Tipo de dato myVarNull: ${typeof myVarNull}`); // object
+
+//tipo de dato symbol
+//Representa un valor único que se puede utilizar como clave en objetos o identificador único
+const mySymbol = Symbol();
+const mySymbol2 = Symbol();
+const myKey = "codigo";
+console.log(` mySymbol == mySymbol2  ${mySymbol == mySymbol2}`);
+
+const myObj = {
+    clave: "valor",
+    [mySymbol] : 16, //se creará una clave privada, no se itera con un ciclo, ni se almacena en LocalStorage
+    myKey : 123,
+    [myKey] : 567
+};
+
+console.log(myObj);
+
+//-----------------------------------------------------------------------------------------------
+
+
