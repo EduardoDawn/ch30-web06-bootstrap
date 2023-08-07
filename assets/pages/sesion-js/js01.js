@@ -122,3 +122,18 @@ console.log(`Valor de la sumatoria ${10 + Number(myAgeTxt)}`); //33
 console.log(`Valor de la sumatoria ${10 + parseInt(myAgeTxt)}`); //33
 console.log(`Valor de la sumatoria ${10 + parseFloat(myAgeTxt)}`); //33
 console.log(`Valor de la sumatoria ${10 + (+myAgeTxt)}`); //33
+
+//Diferencias entre usar Number() y parseInt()
+/* -Number convierte enteros y decimales
+    -parseInt convierte solo enteros
+    -Number devuelve  NaN si la cadena contiene algun caracter no númerico
+    -parseInt convierte los enteros hasta encontrar un caracter no numérico,
+        si la entrada no comienza con un valor númerico, devuelve NaN
+*/
+console.log(Number("123 - 456"));
+console.log(parseInt("123 - 456"));
+console.log(parseInt("$123 - 456"));
+console.log(Number(true));
+console.log(parseInt(true));
+
+
