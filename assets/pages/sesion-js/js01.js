@@ -98,3 +98,27 @@ console.log(misDatosDePerfil);
 console.table(misDatosDePerfil);
 console.log(misDatosDePerfil.fullName); //Te regresa la función
 console.log(misDatosDePerfil.upperName());//Invoca la función
+
+//---------------------------------------
+// Conversión explicita de datos (coerción de tipo)
+const horaDescanso = 13.05;
+console.log("Hora descanso " + horaDescanso + " h."); //concatenación
+const horaDescansoTxt = String(horaDescanso);
+console.log("Hora descanso " + horaDescansoTxt + " h."); 
+console.log("Hora de retorno: " + horaDescanso + .15);
+
+const colorVerde = 0x008000;//Representación decimal: 32769
+console.log(`El valor RGB del color verde es ${colorVerde}`); //32769 
+console.log(`El valor RGB del color verde es ${String(colorVerde)}`); //32769 
+console.log(`El valor RGB del color verde es ${colorVerde.toString()}`); //32769 
+console.log(`El valor RGB del color verde es ${colorVerde.toString(16)}`); //8000 
+console.log(`El valor RGB del color verde es #${colorVerde.toString(16).padStart(6,"0")}`); //#008000 
+
+//Conversión a Number
+const myAgeTxt = "23";
+const sumatoria = 10 + myAgeTxt; //1025
+console.log(`Valor de la sumatoria ${sumatoria}`);
+console.log(`Valor de la sumatoria ${10 + Number(myAgeTxt)}`); //33
+console.log(`Valor de la sumatoria ${10 + parseInt(myAgeTxt)}`); //33
+console.log(`Valor de la sumatoria ${10 + parseFloat(myAgeTxt)}`); //33
+console.log(`Valor de la sumatoria ${10 + (+myAgeTxt)}`); //33
