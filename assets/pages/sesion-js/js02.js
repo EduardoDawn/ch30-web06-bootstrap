@@ -75,3 +75,24 @@ sitaxis:
     console.log(`Me llamo ${name} y me autoinvoco`);
 })("ChatGPT");
 
+/*
+-----------------------Fuciones flecha ------------------
+                       (arrow functions)
+Funciones similares a las funciones expresadas, pero:
+- No requieren la palabra reservada function
+- Si tiene una sola instrucción no requiere las llaves {}
+- Si la instruccion es el mismo retorno, no requiere la palabra return
+
+sitaxis:
+    const nombreVariable = (parámetros) => instrucción;
+    
+    const nombreVariable = (parámetros) => {
+        instrucción;
+        return expresión;
+    }
+
+*/ 
+
+const areaRectangulo = (base,altura) => base*altura;
+
+console.log(`El área es: ${areaRectangulo(3,9)} m2`);
