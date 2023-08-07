@@ -76,6 +76,25 @@ const myObj = {
 
 console.log(myObj);
 
-//-----------------------------------------------------------------------------------------------
+//------------------------ Objetos en JavaScript-----------------------------------------------------------------------
+//tipo de dato Array
+const cancionesCh30 = ["Highway Star", "Trouble", "Saoko","Rock Dj"];
 
-
+//tipo de datos Object
+const misDatosDePerfil = {
+    name : "Eduardo",
+    lastname : "Pérez",
+    age : 29,
+    isBelicoso : false,
+    fullName : function(){
+        return `Nombre completo de Ed: ${this.name} ${this.lastname}`; 
+    },
+    //Agregar una funcion que muestre el nombre completo en mayúsculas
+    upperName : function(){
+        return `Nombre completo en mayúsculas: ${this.name.toUpperCase()} ${this.lastname.toUpperCase()}`; 
+    }
+}
+console.log(misDatosDePerfil);
+console.table(misDatosDePerfil);
+console.log(misDatosDePerfil.fullName); //Te regresa la función
+console.log(misDatosDePerfil.upperName());//Invoca la función
