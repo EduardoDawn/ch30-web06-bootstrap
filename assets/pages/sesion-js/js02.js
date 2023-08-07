@@ -96,3 +96,52 @@ sitaxis:
 const areaRectangulo = (base,altura) => base*altura;
 
 console.log(`El área es: ${areaRectangulo(3,9)} m2`);
+
+/*
+-----------------------Parámetros default ------------------
+                       (default parameters)
+Inicializa un parámetro de la función, si no se envía el arguemnto cuando se invoca
+
+*/ 
+
+/**
+ * Calcula el área de un triángulo
+ * @param {number} base del trinángulo
+ * @param {number} altura del triángulo
+ * @returns {number} base*altura / 2
+ */
+const areaTriangulo = (a=3,b=4) => (a*b)*0.5;
+
+console.log(`El área del triángulo es ${areaTriangulo(5,7)} m2.`);
+
+console.log((1000).toString()); //conversión base 10 -> 1000
+console.log((1000).toString(2));//conversión base 10 -> 1111101000
+console.log((1000).toString(16));//conversión base 10 -> 3e8
+
+
+/*
+-----------------------Parámetros rest ------------------
+                       (rest parameters)
+Permite representar una serie de valores indefinidos en los argumentos
+Esta serie de valores se presentan como un array.
+Rest parameters debe estar al final de la lista de párametros.
+
+sintaxis:
+    ...nombreParametros
+
+
+*/ 
+
+const sumatoriaMultiplesNumeros = (a=0,b=0,...rest) => {
+    let suma = a + b;
+    for (const arg of rest ){
+        suma += arg;
+    }
+    return suma;
+} 
+
+console.log(`Sumatoria de múltiples números: ${sumatoriaMultiplesNumeros(2,5)}`);
+console.log(`Sumatoria de múltiples números: ${sumatoriaMultiplesNumeros(2,5,10,9,20,10)}`);
+
+console.log(`Sumatoria de múltiples números: ${sumatoriaMultiplesNumeros(2)}`);
+
