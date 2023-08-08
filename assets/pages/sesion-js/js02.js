@@ -245,3 +245,80 @@ console.log(numeroP(frase,"P"));
 
 const counterCharacter = (texto,letra) => texto.toLowerCase().split(letra.toLowerCase()).length -1;
 console.log(`Cantidad de letras 'p': ${counterCharacter(frase,"p")}`);
+
+//const frase = "peso pluma pica papas con un pico y una pala con un pico pica papas peso pluma";
+
+const contarLetrasP = (frase) => {
+  const letrasP = frase.split('').filter(letra => letra === 'p' || letra === 'P');
+  return letrasP.length;
+};
+console.log(contarLetrasP(frase));
+
+
+/*------------------------- Recursividad-------------------
+Una función recursiva es una función que se llama así misma durante su ejecución.
+
+Se utiliza en algoritmos y se soluciones que se basa en la división y conquista
+como cálculos matemáticos, recorrido de estructura de datos y algoritmos de búsqued
+y ordenamiento.
+
+Patrón: 
+    function nombreFuncionRecursiva(parametro){
+        if (condicionParo){
+            return expresión;
+        }
+        else{
+            //lamada recursiva
+            nombreFuncionRecursiva( nuevoParametro)
+        }
+    }
+*/
+
+//............Cálculo del factorial de un número usando ciclo for.......
+
+function factorialConCicloFor(numero){
+    let factorial = 1;
+    for (let i = numero; i > 1 ; i--) {
+        factorial *= i;}
+    
+    return factorial;
+    }
+    console.log(`El factorial de 5 es: ${factorialConCicloFor(5)}`); 
+
+
+//..........Cálculo de factorial recursivo ........
+function factorialRecursivo(numero){
+    if (numero == 0){ return 1;}
+    else {return factorialRecursivo(numero-1)*numero;}
+}
+console.log(`El factorial de 5 es: ${factorialRecursivo(5)}`); 
+
+
+// -------------- Saludar con recursividad ---------------------
+/*
+ Generar una función recursiva que muestre en consola un saludo
+ donde se indique el número saludo desado
+
+ ej: saludar 10 veces
+
+  Saludo 1
+  Saludo 2
+  Saludo 3
+   ....
+  Saludo 9
+  Saludo 10
+
+*/
+
+function saludar( numeroSaludo , num = 1) {
+    if (numeroSaludo > 1){
+    console.log(`Saludo ${num}`);
+    saludar(numeroSaludo-1, num + 1);
+}
+    else {
+      console.log(`Saludo ${num}`);      
+    }
+
+}
+
+saludar(10);
