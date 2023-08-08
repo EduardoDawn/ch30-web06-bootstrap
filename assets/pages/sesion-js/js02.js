@@ -145,3 +145,62 @@ console.log(`Sumatoria de múltiples números: ${sumatoriaMultiplesNumeros(2,5,1
 
 console.log(`Sumatoria de múltiples números: ${sumatoriaMultiplesNumeros(2)}`);
 
+/*
+-----------------------Funciones de Callback------------------
+                       (Callback function)
+Es una función (definida, expresada, arrow, anónima) que se pasa a otra función 
+como argumento.
+Se pasa en el argumento como referencia (sin parentesis).
+*/ 
+
+function saludoALosPokemon(){
+    return "Yo te elijo";
+}
+
+function saludosSquirtle(nombre){
+    return "Vamo a calmarno " + nombre;
+}
+
+function eligiendoPokeball(saludo, nombre){
+    console.log("===================================")
+    console.log("Hola, estás en la liga Pokémon");
+    console.log("Elige a tu mejor Pokémon");
+    console.log(saludo(nombre));
+}
+
+eligiendoPokeball(saludoALosPokemon);
+eligiendoPokeball(saludosSquirtle, "Leo");
+eligiendoPokeball(function () { return "Pika pika"});
+eligiendoPokeball(function (nombre) { return "quiii " + nombre}, "Cubone" );
+eligiendoPokeball( nombre => `quiiii ${nombre}` , "Marrowak" );
+
+/*
+  Ejercicio 4
+  Crear un programa que itere sobre dos arreglos;
+  si hay cursos en común, imprimirlos en la consola.
+
+ student1Courses = ["Math", "English", "Programming", "Biology", "Physics", "Music"];
+student2Courses = ["Geography", "Spanish", "Programming", "Music"];
+
+  salida: "Cursos en común: Programming, Music"
+*/
+
+//----------- Resolviendo con cilcos anidados ---------------------
+
+const student1 = ["Math", "English", "Programming", "Biology", "Physics", "Music"];
+const student2 = ["Geography", "Spanish", "Programming", "Music"];
+function cursoEnComun (student1Courses, student2Courses){
+    const courses = []
+    for (let i= 0; i < student1Courses.length; i++){
+        for (let j = 0; j < student2Courses.length; j++) {
+            if (student1Courses[i]=== student2Courses[j]){
+          courses.push(student1Courses[i]);  
+        }
+            
+        }
+        
+    }
+    return courses;
+}
+
+console.log(cursoEnComun(student1,student2));
