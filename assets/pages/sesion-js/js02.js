@@ -235,8 +235,13 @@ console.log(`Comúnxpartes: ${getCoursesWithFilter( student1, student2 )}`);
    Usar funciones flecha.
 
 */
-let frase =  "peso pluma pica papas con un pico y una pala con un pico pica papas peso pluma";
+let frase =  "peso pluma Pica papas con un pico y una pala con un pico pica papas peso pluma";
 
-function numeroP (texto, letra){ return texto.split(letra).length -1;}
+function numeroP (texto, letra){ return texto.toLowerCase().split(letra.toLowerCase()).length -1;}
 
-console.log(numeroP(frase,"p"));
+console.log(numeroP(frase,"P"));
+
+
+
+const counterCharacter = (texto,letra) => texto.toLowerCase().split(letra.toLowerCase()).length -1;
+console.log(`Cantidad de letras 'p': ${counterCharacter(frase,"p")}`);
