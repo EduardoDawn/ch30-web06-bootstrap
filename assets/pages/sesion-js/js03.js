@@ -252,6 +252,7 @@ si es >= 18 indicar en la consola "El usuario es mayor de edad";
 Si no cumple con la condición "El usuario no es mayor de edad"
 */
 
-const userAge = 17;
+//const userAge = parseInt(prompt("Escribe tu edad: ",18));
+const userAge = 18;
 const mayorEdad = userAge >= 18 ? "" : " no";
 console.log(`El usuario${mayorEdad} es mayor de edad`);
