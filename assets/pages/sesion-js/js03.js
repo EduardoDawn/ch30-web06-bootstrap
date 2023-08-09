@@ -143,8 +143,6 @@ const setVelocidadVentilador = (velocidad = 0) => {
             mensaje = "velocidad baja";
             break;
         case 2:
-            mensaje = "velocidad media";
-            break;
         case "2":
             mensaje = "velocidad media";
             break;
@@ -158,4 +156,5 @@ const setVelocidadVentilador = (velocidad = 0) => {
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(1)}`);
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(8)}`);
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador("2")}`);
+console.log(`La velocidad del ventilador está en ${setVelocidadVentilador()}`);
 
