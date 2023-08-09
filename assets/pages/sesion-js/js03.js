@@ -256,3 +256,16 @@ Si no cumple con la condición "El usuario no es mayor de edad"
 const userAge = 18;
 const mayorEdad = userAge >= 18 ? "" : " no";
 console.log(`El usuario${mayorEdad} es mayor de edad`);
+
+
+/* let edad = prompt("Ingresa la edad");
+//const confirmacion = edad >= 18 ? "El usuario es mayor de edad" : "El usuario no es mayor de edad";
+//alert(confirmacion);
+alert(edad >= 18 ? "El usuario es mayor de edad" : "El usuario no es mayor de edad"); */
+
+function factorialRecursivo(numero){
+    const facto = numero == 0 ? 1 : factorialRecursivo(numero-1)*numero ;
+    return facto;
+}
+const num = 5;
+console.log(`El factorial de ${num} es: ${factorialRecursivo(num)}`); 
