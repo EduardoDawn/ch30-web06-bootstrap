@@ -310,15 +310,23 @@ console.log(`El factorial de 5 es: ${factorialRecursivo(5)}`);
 
 */
 
-function saludar( numeroSaludo , num = 1) {
+function saludar( numeroSaludo) {
     if (numeroSaludo > 1){
-    console.log(`Saludo ${num}`);
-    saludar(numeroSaludo-1, num + 1);
+    saludar(numeroSaludo-1);
 }
+ console.log(`Saludo ${numeroSaludo}`);      
+    
+
+} 
+/* function saludar( numeroSaludo) {
+    if (numeroSaludo == 1){
+        console.log(`Saludo ${numeroSaludo}`);
+    }
     else {
-      console.log(`Saludo ${num}`);      
+        saludar(numeroSaludo-1);
+        console.log(`Saludo ${numeroSaludo}`);      
     }
 
-}
-
+} */
 saludar(10);
+
