@@ -157,6 +157,101 @@ console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(8)}`)
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador("2")}`);
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador()}`);
 
-//console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(prompt("Velocidad",1))}`);
+//console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(prompt("Velococidad",1))}`);
 
 
+/*   
+----------Ejercicio Estaciones del año ------------------
+Preguntar por el número de mes (prompt o DOM), del 1 al 12
+Desplegar de acuerdo al mes un Alert(mostrarlo en el DOM) la estación del año.
+ mes 12,1,2 = invierno.
+ mes 3,4,5 = primavera.
+ mes 6,7,8 = verano.
+ mes 9,10,11 = otoño.
+
+ Realizar una versión con if-else-elseif  y otra con switch
+*/
+
+const estacionMesIf = (mes)=>{
+    let mensaje;
+    if (mes >= 3 && mes <= 5){
+        mensaje = "primavera"; 
+    }
+    else if (mes >= 6 && mes <= 8){
+        mensaje = "verano"; 
+    }
+    else if (mes >= 9 && mes <= 11){
+        mensaje = "otoño"; 
+    }
+    else if (mes == 1 || mes == 12 || mes == 2){
+        mensaje = "invierno"; 
+    }
+    else{
+        mensaje = "¡¡No es un mes!!"; 
+    }
+    return mensaje;
+}
+
+const estacionMesSwitch = (mes) =>{
+    let mensaje;
+    switch(parseInt(mes)){
+        case 12:
+        case 1:
+        case 2:
+            mensaje = "invierno";
+            break;
+        case 3:
+        case 4:
+        case 5:
+            mensaje = "primavera";
+            break;
+        case 6:
+        case 7:
+        case 8:
+            mensaje = "verano";
+            break;
+        case 9:
+        case 10:
+        case 11:
+            mensaje = "otoño";
+            break;
+        default:
+            mensaje = "¡¡No es un mes!!";
+            break;
+    }
+ return mensaje;
+}
+
+//alert(estacionMesIf(prompt("Escribe el número del mes",1)));
+
+//alert(estacionMesSwitch(prompt("Escribe el número del mes",2)));
+
+// ------------------- Operador ternario ----------------------
+/* 
+Es el único operador de JavaScript que tiene 3 operandos
+Generalmente se utiliza como opción a la setencia if-else
+
+Sintaxis:
+    condición ? expresiónSiCondicionEsVerdadera : expresionSiCondicionEsFalsa;
+*/
+/* let msj;
+const pagoTarjetaCredito = true;
+if (pagoTarjetaCredito === true) msj = "a realizado el pago de su TC";
+else "no ha realizado el pago de su TC";  */
+
+const pagoTarjetaCredito = true;
+const msj = pagoTarjetaCredito ? "a realizado el pago de su TC" :  "no ha realizado el pago de su TC";
+
+console.log(`El usuario ${msj}`);
+
+/*
+--------------------mini ejercicio -------------
+
+Preguntar con prompt la edad del usuario: 20
+si es >= 18 indicar en la consola "El usuario es mayor de edad";
+Si no cumple con la condición "El usuario no es mayor de edad"
+*/
+
+const userAge = 17;
+const mayorEdad = userAge >= 18 ? "" : " no";
+console.log(`El usuario${mayorEdad} es mayor de edad`);
