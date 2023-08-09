@@ -268,3 +268,4 @@ function factorialRecursivo(numero){
 }
 const num = 0;
 console.log(`El factorial de ${num} es: ${factorialRecursivo(num)}`); 
+
