@@ -157,3 +157,5 @@ console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(8)}`)
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador("2")}`);
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador()}`);
 
+
+
