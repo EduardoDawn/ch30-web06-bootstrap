@@ -135,7 +135,7 @@ const setVelocidadVentilador = (velocidad = 0) => {
     let mensaje;
 
     // la condiciona switch utiliza la comparación estricta (===)
-    switch (velocidad){
+    switch (parseInt(velocidad)){
         case 0:
             mensaje = "apagado";
             break;
@@ -143,7 +143,6 @@ const setVelocidadVentilador = (velocidad = 0) => {
             mensaje = "velocidad baja";
             break;
         case 2:
-        case "2":
             mensaje = "velocidad media";
             break;
         default:
