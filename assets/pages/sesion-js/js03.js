@@ -264,8 +264,7 @@ console.log(`El usuario${mayorEdad} es mayor de edad`);
 alert(edad >= 18 ? "El usuario es mayor de edad" : "El usuario no es mayor de edad"); */
 
 function factorialRecursivo(numero){
-    const facto = numero == 0 ? 1 : factorialRecursivo(numero-1)*numero ;
-    return facto;
+    return numero == 0 ? 1 : factorialRecursivo(numero-1)*numero ;
 }
-const num = 5;
+const num = 0;
 console.log(`El factorial de ${num} es: ${factorialRecursivo(num)}`); 
