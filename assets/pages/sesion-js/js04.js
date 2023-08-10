@@ -32,4 +32,24 @@ for (let equipo = 0; equipo < personasEnCh30.length; equipo++) {
     }
 }
 
+//---------------Uso de for... of ---------------
+/* Ejecuta una setencia por cada elemento de un objeto
+iterable (array, colección, string).
+Sintaxis:
+    for (const iterator of object) {
+    
+}
 
+*/
+
+const myPet = "Kraken";
+for (const character of myPet) {
+    console.log(character);
+}
+
+for (const equipo of personasEnCh30) {
+    console.log(equipo);
+    for (const persona of equipo) {
+        console.log(persona);
+    }
+}
