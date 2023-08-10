@@ -80,3 +80,79 @@ function iterarPersonas(persona, indice){
 personasEnCh30.forEach((equipo,indexEquipo)=> 
     equipo.forEach((persona,indexPer)=> 
         console.log(`[${indexEquipo}][${indexPer}] : ${persona}`)));
+
+/*--------------------Uso de break en ciclos -----------------
+break detiene la ejecución de la iteración en curso y termina
+el ciclo
+*/ 
+
+for (let index = 0; index < 10; index++) {
+    if (index > 5) break;
+    console.log(index);   
+}
+
+//Realizar tablas de multiplicar de 1 al 5
+/* 
+1*1 = 1
+...
+5*10 = 50
+*/
+
+for (let num1 = 1; num1 < 6; num1++) {
+    for(let num2 = 1; num2< 11; num2++){
+        console.log(`${num1} * ${num2} = ${num1 * num2}`);
+    }
+    
+}
+
+console.log("===== Uso de break =========");
+//Realizar la multiplicación hasta el 4
+for (let num1 = 1; num1 < 6; num1++) {
+    for(let num2 = 1; num2< 11; num2++){
+        if(num2 > 4) break;
+        console.log(`${num1} * ${num2} = ${num1 * num2}`);
+    }
+    
+}
+
+console.log("===== Uso de break con tag =========");
+//Realizar la multiplicación hasta el 2*4
+for (let num1 = 1; num1 < 6; num1++) {
+
+    for(let num2 = 1; num2< 11; num2++){
+        if(num2 > 4 && num1 >1) break;
+        console.log(`${num1} * ${num2} = ${num1 * num2}`);
+    }   
+    if(num1 > 1) break;
+}
+
+rompeCicloSuperior:
+for (let num1 = 1; num1 < 6; num1++) {
+
+    for(let num2 = 1; num2< 11; num2++){
+        if(num2 > 4 && num1 > 1) break rompeCicloSuperior;
+        console.log(`${num1} * ${num2} = ${num1 * num2}`);
+    }   
+}
+
+// ------- Uso de continue --------------
+/* 
+Termina la ejecución en la iteración actual y continua con la próxima iteración
+(o en el tag que se indique).
+*/
+//Realizar la multiplicación hasta el 3
+// 1*1, ... 1*3, 2*1
+
+console.log("===== Uso de continue =========");
+continuaCicloSuperior:
+for (let num1 = 1; num1 < 6; num1++) {
+
+    for(let num2 = 1; num2< 11; num2++){
+        if(num2 > 3) continue continuaCicloSuperior;
+        console.log(`${num1} * ${num2} = ${num1 * num2}`);
+    }   
+}
+
+
+
+
