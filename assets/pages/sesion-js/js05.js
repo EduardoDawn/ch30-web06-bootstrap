@@ -94,3 +94,36 @@ for ( ; a < 3; b = a++){
  let y = ++x;  // x = 4  y=4            x, y
  console.log(`x: ${x++} y:${++y}`); // 4 , 5
  console.log(`x: ${x} y:${y}`); //     5 , 5
+
+
+//--------------Operadores lógicos && y || ------------------
+/* 
+También son conocidos como operadores de corto circuito  (short-circuit operators).
+
+&& : La evaluación se detiene tan pronto como se encuentra un operador falso.
+     Ya no se evalua el segundo operando y se retorna la expresión de op1.
+op1 && op2      Si op1 es verdadero, se retorna la expresión de op2.
+
+op1 || op2     Si OP1 es verdadero, se retorna la expresión de op1.
+
+
+*/
+
+const va = true, vb = false, vc = true; // const va, const vb, const vc
+const n1 = n2 = n3 = true;// const n1, var n2m var n3
+console.log(va || vb && vc); // true
+
+// Conversión a booleano
+// En la conversión de boolean los siguientes valores son false:
+// "", 0, null, undefined, NaN
+
+console.log(va && "Holi Crayoli"); //"Holi Crayoli"
+console.log(vb && "Holi Crayoli"); //false
+console.log(NaN && "Holi Crayoli"); // NaN
+console.log("false" && "Holi Crayoli"); // "Holi crayoli"
+console.log("" && "Activado"); // ""
+console.log("Activado" && ""); // ""
+console.log("Activado" || papasFritas); // 
+
+
+
