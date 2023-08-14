@@ -141,3 +141,81 @@ const occupation = person.occupation || "Software Enginner"; //Software
 
 console.log(`Ocupación: ${occupation}`);
 
+
+
+
+/* ------------------ Comparación Estricta ------------------------
+
+=== Estrictamente igual, se debe comparar el valor y el tipo de dato
+!== Estrictamente diferente, debe ser diferente en valor y tipo
+
+*/ 
+
+console.log("23" === 23); //false
+console.log("true" === true); // false
+console.log("true" == true); // false  --la concatenación solo ocurre con string de números
+console.log("45" !== 45); // true
+
+
+/* ------------- Operador de desestructuración (Destructuring) ------------
+
+Es una expresión en JS que hace posible extraer datos de 
+arreglos u objetos y nos ayuda a realizar asignaciones más
+complejas.
+
+ */
+
+let dataA = 10;
+let dataB = 20;
+console.log(`a: ${dataA}, b: ${dataB}`);
+
+//Intercambiar los datos
+[dataA, dataB] = [dataB, dataA];
+console.log(`a: ${dataA}, b: ${dataB}`);
+
+const car ={
+    model: "Vento",
+    year: 2023,
+    brand: "VW",
+    color: "red",
+    price: 320_000,
+    additionaInfo : {
+        bluetooth: true,
+        cruiseControl : true,
+        gps: false,
+    }
+}
+
+
+//const [model, year] = [car.model, car.year];
+//const  {year, model:carModel, additionaInfo} = car;
+const  {year, model:carModel, additionaInfo :{bluetooth}} = car;
+
+
+
+console.log(`Modelo: ${carModel}`);
+console.log(`Año: ${year}`);
+//console.log(`Tiene bluetooth: ${additionaInfo.bluetooth? "Sí" : "No"}`);
+console.log(`Tiene bluetooth: ${bluetooth ? "Sí" : "No"}`);
+
+
+// ------------------  ejercicio ------------------------
+/*
+   Hacer una función que realice la división de 2 números
+   y entregue (return) en entero el cociente y residuo.
+
+   Llamar a la función y mostrar en la consola el resultado.
+
+
+*/
+function dividiendo(num1, num2) {
+       const  cociente= parseInt(num1/num2);
+       const  residuo= num1 % num2;
+    return {cociente,residuo};
+}
+
+const [div1, div2] = [9,4];
+const {cociente, residuo} = dividiendo(div1,div2);
+console.log(`En ${div1}/${div2} el cociente es ${cociente} y el residuo es ${residuo}`);
+
+//---------------------------------------------
