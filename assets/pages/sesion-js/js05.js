@@ -125,5 +125,19 @@ console.log("" && "Activado"); // ""
 console.log("Activado" && ""); // ""
 console.log("Activado" || papasFritas); // 
 
+const person = {
+    name : "Leo",
+    lastname : "Ronaldo",
+    age : 25,
 
+};
+
+console.log(`nombre: ${person.name}`);
+console.log(`nombre: ${person["name"]}`);
+
+//const occupation = person.occupation; //undefined
+const occupation = person.occupation || "Software Enginner"; //Software
+//const occupation = person.occupation ?? "Software Enginner"; //operador nullish Coalescing
+
+console.log(`Ocupación: ${occupation}`);
 
