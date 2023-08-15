@@ -6,7 +6,7 @@ const findElementById = () => {
     const title = document.getElementById("title");
 
     //title.innerHTML = `Generation - Sesión JS06`;
-    title.innerHTML = `<span class="text-primary"> Generation </span>- Sesión JS06`;
+    title.innerHTML = `<span class="text-primary" id="generation"> Generation </span>- Sesión JS06`;
 }
 
 
@@ -62,4 +62,42 @@ const newElement = () => {
 }
 
 newElement();
+
+// --------------------Cambiar el color de texto -----------
+//style.color
+
+const changeColor = (color) =>{
+    const descriptionCh30 = document.getElementById("descriptionCh30");
+    descriptionCh30.style.color = color;
+    descriptionCh30.style.border = `thin solid ${color}`;
+}
+
+changeColor("beige");
+
+/*-----------------Propiedades de visualización---------------
+        Desaparecer el elemento
+display : none (quitar el elemento del DOM)
+visibility: hidden (ocultar el elemento)
+
+*/
+const getReferenceTitleGeneration = () =>{
+    return document.getElementById("generation");
+}
+
+const displayNoneElement = () =>{
+    getReferenceTitleGeneration();
+    generation.style.display = "none";//quitar el elemento
+}
+
+const hiddenElement = () =>{
+    getReferenceTitleGeneration();
+    generation.style.visibility = "hidden";
+}
+
+const resetElements = () =>{
+    getReferenceTitleGeneration();
+    generation.style.visibility = "visible";
+    generation.style.display = "inline";//quitar el elemento
+    
+}
 
