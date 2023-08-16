@@ -38,6 +38,56 @@ const pasoAsincrono = (name) =>{
 };
 
 console.log("**********************************");
-primerPaso();
+/* primerPaso();
 pasoAsincrono("Baby Yoda multiverso");
 tercerPaso();
+*/
+
+
+// ------------------------- setInterval ------------------------
+// Ejecuta una funció de manera reiterada con un tiempo de retardo fijo
+
+const pasoConIntervalo = () => {
+    setInterval( ()=> console.log("Hola " + new Date().toLocaleString() )  , 3000 );
+}
+
+/* primerPaso(); // 01- Inicio del mi programa
+pasoConIntervalo();
+tercerPaso(); // 03- Fin de mi programa */
+
+// -------------------------Iniciar y detener setInterval ----------
+
+const startInterval = document.getElementById("startInterval");
+const stopInterval = document.getElementById("stopInterval");
+const dateH2 = document.getElementById("dateH2");
+let idInterval = []; // la referencia del ID que nos proprociona setInterval
+
+startInterval.addEventListener("click" , ()=>{
+    const id = setInterval(  ()=>{ dateH2.innerHTML = new Date().toLocaleString() }, 1000   );
+    //LIFO
+    idInterval.push(id);
+    disableStartButton();
+}  );
+
+stopInterval.addEventListener("click" , ()=>{
+    console.table(idInterval);
+    clearInterval(idInterval.pop()); //detener el intervalo
+    enableStartButton();
+}  );
+
+const stateButtons = (startButtonState=false, stopButtonState = false) =>{
+    /* startInterval.disabled = startButtonState;
+    stopInterval.disabled = stopButtonState; */
+    startInterval.style.display = startButtonState ? "none" : "inline";
+    stopInterval.style.display = stopButtonState ? "none" :"inline";
+};
+
+const disableStartButton = () =>{
+    stateButtons(true,false);
+}
+
+const enableStartButton = () =>{
+    stateButtons(false,true);
+}
+
+enableStartButton();
