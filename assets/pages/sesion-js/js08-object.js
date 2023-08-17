@@ -24,12 +24,18 @@ const postUser = async (userData) =>{
 
     const responseJSON = await fetch(url, {
         method:"POST", //POST, PUT DELETE, GET
-        boidy: JSON.stringify(userData) ,//datos del usuario
+        body: JSON.stringify(userData) ,//datos del usuario
         headers: {"Content-Type":"application/json"},
 
     } );
 
     const response = await responseJSON.json();//convertir de JSON a Object JS
+    console.log(response);
     response.id && alert(`${response.id}: ${response.token}`);//Con el and solo se ejecuta cuando se lleva a cabo
+    
+    //iterar sobre un objeto
+    for (const key in response) {
+        console.log(`clase: ${key}, value: ${response[key]}`);
+    }
 
 }
