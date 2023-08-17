@@ -1,1 +1,1 @@
-console.log("JS08 Programación orientada a objetos")
+console.log("Sesión js08 - OOP ");
